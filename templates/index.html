@@ -1,0 +1,417 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <style>
+        * {
+            font-family: Verdana;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hype - Turkcell</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="../static/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../static/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../static/vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="../static/vendors/jqvmap/dist/jqvmap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/default.css?update=01112013">
+
+    <!-- Jquery Plugins-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/raphael.js?update=01112013"></script>
+    <script type="text/javascript" src="../static/assets/js/paths.js?update=01112013"></script>
+    <script type="text/javascript" src="../static/assets/js/init.js?update=01112013"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.tipsy.js?update=01112013"></script>
+
+</head>
+
+<body>
+
+<div class="header" style="background-color: #151b5f; margin-top: 0; padding: 20px 20px 20px 40px; margin-bottom: 10px">
+    <img class="hype-logo" style="height: 45px; margin-right: 10px" src="https://i.hizliresim.com/pbbM3J.png"/>
+    <img class="hype-logo" style="height: 45px;" src="https://i.hizliresim.com/bv9bG8.png"/>
+    <ul class="nav" style="float:right; width: 150px; margin-top: -80px; list-style-type: none;">
+        <li style="text-align: center;"><a
+                style="font-family: Questrial, sans-serif; display: block; color: white; padding: 16px; text-decoration: none;"
+                href="/">DASHBOARD</a></li>
+    </ul>
+</div>
+
+
+<div id="right-panel" class="right-panel">
+    <div class="content mt-3">
+        <h2 style="margin-bottom: 10px; margin-left: 10px; color: #151b5f; font-weight: bold;">Turkcell.com.tr</h2>
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-1" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+                    <h2 class="mb-0">
+                        <span class="count" style="font-size: 52px;">{{ datacomtr }}</span>
+                    </h2>
+                    <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-2" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+                    <h4 class="mb-0">
+                        <span class="count" style="font-size: 52px;">{{ data2comtr[0][1] }}</span>
+                    </h4>
+                    <i class="fa fa-desktop" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-3" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+
+                    <h4 class="mb-0">
+                        <span class="count" style="font-size: 52px;">{{ data2comtr[1][1] }}</span>
+                    </h4>
+                    <i class="fa fa-mobile" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-4" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+                    <h4 class="mb-0">
+                        <span class="count" style="font-size: 52px;">{{ data2comtr[2][1] }}</span>
+                    </h4>
+                    <i class="fa fa-tablet" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-footer">
+                    <h3>Today</h3>
+                    <ul>
+                        <li>
+                            <div class="text-muted">Visits</div>
+                            <strong>{{ metrics_t[0] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"
+                                     aria-valuenow="{{ metrics_t[0] }}" aria-valuemin="0" aria-valuemax="10000000"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-muted">Pageviews</div>
+                            <strong>{{ metrics_t[1] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+                                     aria-valuenow="{{ metrics_t[1] }}" aria-valuemin="0" aria-valuemax="10000000"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">New Users</div>
+                            <strong>{{ metrics_t[2] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"
+                                     aria-valuenow="{{ metrics_t[2] }}" aria-valuemin="0" aria-valuemax="1000"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">Bounce Rate</div>
+                            <strong id="bounce" style="text-overflow: ellipsis;">{{ metrics_t[3] }}</strong>
+                            <script>
+                                document.getElementById("bounce").innerText = document.getElementById("bounce").innerText.substring(0, 5) + "%"
+                            </script>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                                     aria-valuemin="{{ metrics_t[3] }}" aria-valuemax="50"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-footer">
+                    <h3>Yesterday</h3>
+                    <ul>
+                        <li>
+                            <div class="text-muted">Visits</div>
+                            <strong>{{ metrics_y[0] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"
+                                     aria-valuenow="2000" aria-valuemin="0" aria-valuemax="10000000"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-muted">Pageviews</div>
+                            <strong>{{ metrics_y[1] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+                                     aria-valuenow="{{ metrics_y[1] }}" aria-valuemin="0" aria-valuemax="10000000"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">New Users</div>
+                            <strong>{{ metrics_y[2] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"
+                                     aria-valuenow="{{ metrics_y[2] }}" aria-valuemin="0" aria-valuemax="1000"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">Bounce Rate</div>
+                            <strong id="bounce1" style="text-overflow: ellipsis;">{{ metrics_y[3] }}</strong>
+                            <script>
+                                document.getElementById("bounce1").innerText = document.getElementById("bounce1").innerText.substring(0, 5) + "%"
+                            </script>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                                     aria-valuemin="{{ metrics_y[3] }}" aria-valuemax="50"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- .content -->
+</div><!-- /#right-panel -->
+
+<!-- Right Panel -->
+
+
+<div id="right-panel" class="right-panel" style="float:left;">
+    <div class="content mt-3">
+        <h2 style="margin-bottom: 10px; margin-left: 10px; color: #151b5f; font-weight: bold;">Turksporu.com.tr</h2>
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-1" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+                    <h4 class="mb-0">
+                        {% if dataturksporu %}
+                            <span class="count" style="font-size: 52px;">{{ dataturksporu }}</span>
+                        {% else %}
+                            <span class="count" style="font-size: 52px;">0</span>
+                        {% endif %}
+                    </h4>
+                    <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-2" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+
+                    <h4 class="mb-0">
+                        {% if data2turksporu[0] %}
+                            <span class="count" style="font-size: 52px;">{{ data2turksporu[0][1] }}</span>
+                        {% else %}
+                            <span class="count" style="font-size: 52px;">0</span>
+                        {% endif %}
+                    </h4>
+                    <i class="fa fa-desktop" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-3" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+
+                    <h4 class="mb-0">
+                        {% if data2turksporu[1] %}
+                            <span class="count" style="font-size: 52px;">{{ data2turksporu[1][1] }}</span>
+                        {% else %}
+                            <span class="count" style="font-size: 52px;">0</span>
+                        {% endif %}
+                    </h4>
+                    <i class="fa fa-mobile" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-flat-color-4" style="padding-bottom: 30px; text-align: center">
+                <div class="card-body pb-0">
+                    <h4 class="mb-0">
+                        {% if data2turksporu[2] %}
+                            <span class="count" style="font-size: 52px;">{{ data2turksporu[2][1] }}</span>
+                        {% else %}
+                            <span class="count" style="font-size: 52px;">0</span>
+                        {% endif %}
+                    </h4>
+                    <i class="fa fa-tablet" aria-hidden="true" style="font-size: 52px; margin-top: 10px;"></i>
+
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-footer">
+                    <h3>Today</h3>
+                    <ul>
+                        <li>
+                            <div class="text-muted">Visits</div>
+                            <strong>{{ metrics_tsr_t[0] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"
+                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-muted">Pageviews</div>
+                            <strong>{{ metrics_tsr_t[1] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">New Users</div>
+                            <strong>{{ metrics_tsr_t[2] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"
+                                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">Bounce Rate</div>
+                            <strong id="t_bounce1" style="text-overflow: ellipsis;">{{ metrics_tsr_t[3] }}</strong>
+                            <script>
+                                document.getElementById("t_bounce1").innerText = document.getElementById("t_bounce1").innerText.substring(0, 5) + "%"
+                            </script>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-footer">
+                    <h3>Yesterday</h3>
+                    <ul>
+                        <li>
+                            <div class="text-muted">Visits</div>
+                            <strong>{{ metrics_tsr_y[0] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"
+                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-muted">Pageviews</div>
+                            <strong>{{ metrics_tsr_y[1] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">New Users</div>
+                            <strong>{{ metrics_tsr_y[2] }}</strong>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"
+                                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li class="hidden-sm-down">
+                            <div class="text-muted">Bounce Rate</div>
+                            <strong id="t_bounce2" style="text-overflow: ellipsis;">{{ metrics_tsr_y[3] }}</strong>
+                            <script>
+                                document.getElementById("t_bounce2").innerText = document.getElementById("t_bounce2").innerText.substring(0, 5) + "%"
+                            </script>
+                            <div class="progress progress-xs mt-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- .content -->
+</div><!-- /#right-panel -->
+
+<script src="../static/vendors/jquery/dist/jquery.min.js"></script>
+<script src="../static/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="../static/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/main.js"></script>
+
+
+<script src="../static/vendors/chart.js/dist/Chart.bundle.min.js"></script>
+<script src="../static/assets/js/dashboard.js"></script>
+<script src="../static/assets/js/widgets.js"></script>
+<script src="../static/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+<script src="../static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<script src="../static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script>
+    (function ($) {
+        "use strict";
+
+        jQuery('#vmap').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#1de9b6',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#1de9b6', '#03a9f5'],
+            normalizeFunction: 'polynomial'
+        });
+    })(jQuery);
+
+    setTimeout(function () {
+        window.location.reload(1);
+    }, 30000);
+</script>
+
+</body>
+
+</html>
